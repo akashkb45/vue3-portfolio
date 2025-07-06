@@ -32,7 +32,7 @@ const scroll = (sectionName) => {
     <div class="dashboard-container">
       <div class="inner-block">
         <header class="profile-header">
-          <div class="logo">AKASH K B</div>
+          <div class="logo">PORTFOLIO</div>
           <nav class="navigation">
             <span :class="{ active: tab === 'projects' }" @click="scroll('projects')">Projects</span>
             <span :class="{ active: tab === 'about' }" @click="scroll('skills')">About</span>
@@ -59,8 +59,8 @@ const scroll = (sectionName) => {
 
         <div class="profile-content">
           <h1>
-            My name is Akash K B, <br />
-            I work as a Front-end Developer
+            Hi, I'm <span class="highlight">Akash K B</span><br />
+            A Passionate Front-End Developer
           </h1>
           <p>I build modern, responsive, and user-friendly websites with a focus on clean design and efficient code.</p>
         </div>
@@ -84,6 +84,8 @@ section {
 
 .profile-dashboard .dashboard-container {
   padding: 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .profile-dashboard .dashboard-container .inner-block {
@@ -96,6 +98,8 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .profile-header .logo {
@@ -108,13 +112,13 @@ section {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .profile-header .navigation span {
-  margin: 0 15px;
-  font-size: 1.2rem;
+  margin: 0 10px;
+  font-size: 1.1rem;
   cursor: pointer;
-  text-align: center;
   position: relative;
   padding-bottom: 5px;
 }
@@ -143,24 +147,19 @@ section {
 }
 
 .profile-header .navigation .selected::after {
-  content: "";
-  position: absolute;
   width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: #00f9ff;
-  transition: width 0.3s ease;
 }
 
 .profile-header .socials {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .socials a {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: color 0.3s;
 }
 
@@ -168,42 +167,30 @@ section {
   color: #00f9ff;
 }
 
-.profile-header .profile-pages {
-  display: flex;
-  gap: 25px;
-}
-
-.profile-header .profile-pages i {
-  font-size: 1.4rem;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.profile-header .profile-pages i:hover {
-  color: #00f9ff;
-}
-
 .profile-content {
   margin: 30px 0;
-  height: 400px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  padding: 20px;
 }
 
 .profile-content h1 {
-  font-size: 4rem;
-  text-align: center;
+  font-size: 2.5rem;
   color: #fff;
   animation: fadeInSlideUp 2s ease-out;
 }
 
 .profile-content p {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   animation: fadeInSlideUp 3s ease-out;
+  color: #cbd5e1;
+  max-width: 600px;
 }
 
 @keyframes fadeInSlideUp {
@@ -217,13 +204,14 @@ section {
   }
 }
 
+/* Responsive Projects Section */
 .project-container .project-header {
   width: 100%;
   position: relative;
 }
 
 .project-container .project-header h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 15px 0;
   color: #00f9ff;
   position: relative;
@@ -242,6 +230,8 @@ section {
 
 .project-container .project-content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
 }
 
@@ -249,8 +239,9 @@ section {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.229);
   background-blend-mode: overlay;
-  background-size: contain;
-  width: 300px;
+  background-size: cover;
+  width: 100%;
+  max-width: 300px;
   border-radius: 20px;
   height: 460px;
   display: flex;
@@ -261,15 +252,17 @@ section {
   transition: 0.5s ease-in-out;
 }
 
+.project-container .project-content .project-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: grayscale(0%);
+}
+
 .project-container .project-content .project-card h1 {
   text-transform: uppercase;
   font-size: 2rem;
-}
-
-.project-container .project-content .project-card:hover {
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.7);
-  filter: grayscale(0%);
+  color: #fff;
+  text-align: center;
 }
 
 @keyframes slideInBorder {
@@ -278,6 +271,58 @@ section {
   }
   100% {
     width: 100%;
+  }
+}
+
+/* ------------------------------------ */
+/* 📱 Responsive Design Media Queries  */
+/* ------------------------------------ */
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .profile-content h1 {
+    font-size: 2rem;
+  }
+
+  .profile-content p {
+    font-size: 1rem;
+  }
+
+  .project-container .project-content .project-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header .navigation {
+    gap: 12px;
+    align-items: center;
+  }
+
+  .profile-header .navigation span {
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+
+  .profile-header .logo {
+    font-size: 1.5rem;
+  }
+
+  .socials a {
+    font-size: 1.1rem;
+  }
+
+  .profile-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-content p {
+    font-size: 0.95rem;
   }
 }
 </style>

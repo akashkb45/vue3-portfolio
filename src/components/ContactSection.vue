@@ -17,14 +17,14 @@
       </p>
 
       <div class="cta-buttons">
-        <a href="mailto:you@example.com" class="btn primary"> ✉️ Send Email </a>
-        <a href="#" class="btn outline"> 📅 Schedule Call </a>
+        <a href="mailto:akashkb45@gmail.com" class="btn primary" target="_blank"> ✉️ Send Email </a>
+        <a href="https://wa.me/919074145470" class="btn outline" target="_blank"> 💬 Chat on WhatsApp </a>
       </div>
 
       <div class="social-icons">
         <a href="#" target="_blank">🐱</a>
         <a href="#" target="_blank">💼</a>
-        <a href="mailto:you@example.com">✉️</a>
+        <a href="mailto:akashkb45@gmail.com" target="_blank">✉️</a>
       </div>
     </div>
   </div>
