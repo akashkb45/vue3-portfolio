@@ -39,19 +39,19 @@ const scroll = (sectionName) => {
             <span :class="{ active: tab === 'contact' }" @click="scroll('contacts')">Contact</span>
           </nav>
           <div class="socials">
-            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/akashkb45" target="_blank" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#" target="_blank" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/akash-k-b-744169283" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" target="_blank" aria-label="Instagram">
+            <a href="https://instagram.com/_ak_a__sh_" target="_blank" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" target="_blank" aria-label="Twitter">
+            <a href="https://x.com/akashkb_45" target="_blank" aria-label="Twitter">
               <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="#" target="_blank" aria-label="Facebook">
+            <a href="https://facebook.com/akash.aachi.1" target="_blank" aria-label="Facebook">
               <i class="fab fa-facebook"></i>
             </a>
           </div>
@@ -158,7 +158,7 @@ section {
   gap: 15px;
 }
 
-.profile-header .socials a {
+.socials a {
   color: #ffffff;
   font-size: 1.2rem;
   transition: color 0.3s;
