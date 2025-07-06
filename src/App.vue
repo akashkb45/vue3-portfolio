@@ -1,17 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ProfileDashboard></ProfileDashboard>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProfileDashboard from "./components/ProfileDashboard.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ProfileDashboard,
+  },
+};
 </script>
 
 <style>
