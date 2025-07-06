@@ -35,7 +35,7 @@ const scroll = (sectionName) => {
           <div class="logo">PORTFOLIO</div>
           <nav class="navigation">
             <span :class="{ active: tab === 'projects' }" @click="scroll('projects')">Projects</span>
-            <span :class="{ active: tab === 'about' }" @click="scroll('skills')">About</span>
+            <span :class="{ active: tab === 'about' }" @click="scroll('skills')">Skills</span>
             <span :class="{ active: tab === 'contact' }" @click="scroll('contacts')">Contact</span>
           </nav>
           <div class="socials">
